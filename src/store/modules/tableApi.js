@@ -20,8 +20,8 @@ const tableModule = {
 
   actions: {
     async GET_API (context, payload) {
-      const apiUrl = 'http://localhost:3000/tableApi'
-      const res = await api.get(apiUrl)
+      const url = 'http://localhost:3000/tableApi'
+      const res = await api.get(url)
       payload = res
       context.commit('SET_RES', payload)
       console.log('####Actions GET_API: ', res, payload)
@@ -29,24 +29,24 @@ const tableModule = {
     },
 
     async POST_API (context, payload) {
-      const apiUrl = 'http://localhost:3000/tableApi'
-      await api.post(apiUrl, payload)
+      const url = 'http://localhost:3000/tableApi'
+      await api.post(url, payload)
       context.dispatch('GET_API')
       console.log('####Actions POST_API payload: ', payload)
     },
 
     async PUT_API (context, payload) {
       console.log('####Actions PUT_API: ', payload)
-      const apiUrl = `http://localhost:3000/tableApi/${payload.id}`
-      await api.put(apiUrl, payload)
+      const url = `http://localhost:3000/tableApi/${payload.id}`
+      await api.put(url, payload)
       context.dispatch('GET_API')
       console.log('####Actions PUT_API: ', payload)
       console.log('####Actions PUT_API context: ', context)
     },
 
-    async DELETE_API (context, payload) {
-      const apiUrl = `http://localhost:3000/tableApi/${payload}`
-      await api.delete(apiUrl)
+    async DEL_API (context, payload) {
+      const url = `http://localhost:3000/tableApi/${payload}`
+      await api.delete(url)
       context.dispatch('GET_API')
       console.log('####Actions DELETE_API: ', payload)
     }
