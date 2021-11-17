@@ -17,7 +17,7 @@
       </el-table-column>
     </el-table>
     <el-dialog
-        title="新增商品"
+        title="提示"
         :visible.sync="showDialog"
         width="40%"
         @close="handleClose">
@@ -77,7 +77,6 @@ export default {
             type: 'success',
             message: '新增成功!'
         })
-        this.showDialog = false
       }catch{
         this.$message({
             type: 'error',
@@ -94,7 +93,6 @@ export default {
             type: 'success',
             message: '修改成功!'
         })
-        this.showDialog = false
       }catch{
         this.$message({
             type: 'error',
@@ -111,7 +109,7 @@ export default {
         console.log('error')
       }
     },
-    //打開dialog
+    //新增 打開dialog
     addProduct(){
       this.showDialog = true
       this.submitStatus ='add'
@@ -134,14 +132,16 @@ export default {
     //判斷是要新增還是編輯
     handleSubmit(){
       if(this.submitStatus === 'edit'){
-        this.PUT_API()
+        this.PUT_API(this.formData)
+        this.showDialog = false
         this.submitStatus =''
       }else if(this.submitStatus === 'add'){
-        this.POST_API()
+        this.POST_API(this.formData)
+        this.showDialog = false
         this.submitStatus =''
       }
     },
-    // 刪除資料
+    // 刪除資料(最後提醒)
     handleDel(id){
       this.$confirm('將會刪除商品資料，是否繼續', '注意', {
           confirmButtonText: '確定',
