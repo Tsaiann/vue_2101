@@ -18,6 +18,11 @@ const routes = [
     path: '/vuex',
     name: 'vuex',
     component: () => import('../views/Vuex.vue')
+  },
+  {
+    path: '/i18n',
+    name: 'i18n',
+    component: () => import('../views/I18n.vue')
   }
 ]
 
