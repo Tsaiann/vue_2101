@@ -23,6 +23,11 @@ const routes = [
     path: '/i18n',
     name: 'i18n',
     component: () => import('../views/I18n.vue')
+  },
+  {
+    path: '/i18n_change',
+    name: 'i18n_change',
+    component:() => import('../views/I18n_change.vue')
   }
 ]
 

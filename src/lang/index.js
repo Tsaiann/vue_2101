@@ -18,7 +18,7 @@ cookie.setLanguage('zh_tw')
 
 const loadedLanguages = []
 
-// 取得現在的語言設定
+//取得現在的語言設定
 export const getLocale = () => {
   const cookieLanguage = cookie.getLanguage()
   // from cookie
@@ -36,10 +36,10 @@ export const getLocale = () => {
 const locale = getLocale()
 
 // 設置語言的事件
-
 const setI18nLanguage = (lang) => {
   i18n.locale = lang
   cookie.setLanguage(lang)
+  console.log('###set lang: ', lang)
   return lang
 }
 
@@ -62,21 +62,18 @@ export const loadLanguageAsync = async (lang) => {
 }
 
 // Fetch對應的json語言包
-
 const getMessages = async (locale) => {
   // ElementUI中使用的locale key稍微不同，格式必須正確
   const elementUILocMap = {
     en: 'en',
     zh_tw: 'zh-TW',
   }
-  
   let langFile
-  
   if (locale === 'zh_tw') {
     langFile = await (await fetch(`locale/zh.json`)).json()
   } else if (locale === 'en') {
     langFile = await (await fetch(`locale/en.json`)).json()
-  } 
+  }
 
   const elLangFile = await import(/* webpackChunkName: "lang-elementui-[request]" */`element-ui/lib/locale/lang/${elementUILocMap[locale]}`)
   return { ...langFile, ...elLangFile.default}
