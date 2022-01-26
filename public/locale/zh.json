@@ -11,5 +11,11 @@
   "bloodType":"血型",
   "bloodTypePlaceholder":"請選擇血型",
   "submit":"送出",
-  "cancel":"取消"
+  "cancel":"取消",
+  "defalt":"默認按鈕",
+  "primary":"主要按鈕",
+  "success":"成功按鈕",
+  "info":"信息按鈕",
+  "warning":"警告按鈕",
+  "danger":"危險按鈕"
 }
