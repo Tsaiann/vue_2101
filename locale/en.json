@@ -1,0 +1,21 @@
+{
+  "header": "Vue i18n Multi Language",
+  "select_language": "select language",
+  "change_language": "change language",
+  "please_select": "please select",
+  "locale_en": "English",
+  "locale_zh_tw": "Chinese(Traditional)",
+  "name":"Name",
+  "age":"Age",
+  "email":"Email",
+  "blood_type":"BloodType",
+  "blood_type_placeholder":"select blood type",
+  "submit":"Sumbit",
+  "cancel":"Cancel",
+  "defalt":"defalt button",
+  "primary":"primary button",
+  "success":"success button",
+  "info":"info button",
+  "warning":"warning button",
+  "danger":"danger button"
+}
