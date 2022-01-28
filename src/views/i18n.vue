@@ -16,10 +16,10 @@
       <el-form-item :label="$t('email')">
         <el-input :model="formData.email" placeholder="ex: bbb45@gmail.com"></el-input>
       </el-form-item>
-      <el-form-item :label="$t('bloodType')">
-        <el-select v-model="currentvalue" :placeholder="$t('bloodTypePlaceholder')">
+      <el-form-item :label="$t('blood_type')">
+        <el-select v-model="currentvalue" :placeholder="$t('blood_type_placeholder')">
           <el-option
-            v-for="(item,i) in formData.options"
+            v-for="(item,i) in formData.bloodType"
             :key="i"
             :label="item.label"
             :value="item.value">
@@ -50,7 +50,7 @@ export default {
         name:'',
         age:'',
         email:'',
-        options: [{
+        bloodType: [{
           value: 'A',
           label: 'A'
         }, {
