@@ -8,11 +8,12 @@
     <el-button type="danger">{{ $t('danger') }}</el-button>
   </div>  
 </template>
+
 <script>
 export default {
-  name:"i18n_change",
+  name:"i18nChange",
   data(){
-    return
+    return{}
   },
   methods:{
     

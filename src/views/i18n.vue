@@ -6,15 +6,15 @@
         <el-option v-for="(item, i) in languageList" :key="i" :label="item.label" :value="item.value" ></el-option>
       </el-select>
     </div>
-    <el-form ref="form" :model="formData" label-width="80px">
+    <el-form ref="form" v-model="formData" label-width="80px">
       <el-form-item :label="$t('name')">
-        <el-input v-modle="formData.name"></el-input>
+        <el-input v-model="formData.name"></el-input>
       </el-form-item>
       <el-form-item :label="$t('age')">
-        <el-input :model="formData.age" placeholder="ex: 0933456455"></el-input>
+        <el-input v-model="formData.age" placeholder="ex: 0933456455"></el-input>
       </el-form-item>
       <el-form-item :label="$t('email')">
-        <el-input :model="formData.email" placeholder="ex: bbb45@gmail.com"></el-input>
+        <el-input v-model="formData.email" placeholder="ex: bbb45@gmail.com"></el-input>
       </el-form-item>
       <el-form-item :label="$t('blood_type')">
         <el-select v-model="currentvalue" :placeholder="$t('blood_type_placeholder')">

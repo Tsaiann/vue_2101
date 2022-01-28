@@ -20,14 +20,14 @@ const routes = [
     component: () => import('../views/Vuex.vue')
   },
   {
+    path: '/i18nChange',
+    name: 'i18nChange',
+    component:() => import('../views/I18nChange.vue')
+  },
+  {
     path: '/i18n',
     name: 'i18n',
     component: () => import('../views/I18n.vue')
-  },
-  {
-    path: '/i18n_change',
-    name: 'i18n_change',
-    component:() => import('../views/I18n_change.vue')
   }
 ]
 
