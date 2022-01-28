@@ -1,6 +1,6 @@
 <template>
   <div class="row vertical" data-inset="1rem">
-    <el-button type="primary" @click="callApi">{{ $t('submit')}}</el-button>
+    <el-button type="primary" @click="callApi">Call Api</el-button>
   </div>
 </template>
 
